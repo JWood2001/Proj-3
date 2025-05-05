@@ -24,6 +24,8 @@ A simple F#/.NET 9 web app using Giraffe that parses MicroML code and renders it
 - [.NET 9.0 SDK](https://dotnet.microsoft.com/download)  
 - Git (for version control)
 
+- ![AST UI](./Screenshots/MicroML-Visualizer.png)
+
 ---
 
 ## Getting Started
@@ -39,5 +41,4 @@ dotnet restore
 # Run the web app
 dotnet run --project WebApp
 
-![AST UI](./Screenshots/MicroML-Visualizer.png)
 

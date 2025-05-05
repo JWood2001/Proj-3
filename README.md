@@ -2,6 +2,8 @@
 
 A simple F#/.NET 9 web app using Giraffe that parses MicroML code and renders its Abstract Syntax Tree (AST) on a single page.
 
+![AST UI](./Screenshots/MicroML-Visualizer.png)
+
 ---
 
 ## Features
@@ -39,9 +41,4 @@ dotnet restore
 # Run the web app
 dotnet run --project WebApp
 
-<<<<<<< HEAD
-![AST UI](./Screenshots/MicroML-Visualizer.png)
 
-=======
-![AST UI](./Screenshots/MicroML-Visualizer.png)
->>>>>>> 10019aa (Add README documentation and images)

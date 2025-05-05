@@ -14,57 +14,57 @@
 </member>
 <member name="M:Parser.Parsing.parse(System.String)">
 <summary>
- Public parse function returning a Result&lt;Expr,string&gt;
-</summary>
-</member>
-<member name="P:Parser.Parsing.app">
-<summary>
- Function application: chain of simple terms
-</summary>
-</member>
-<member name="P:Parser.Parsing.simple">
-<summary>
- Simple term: literal, var, lambda, let, or parenthesized
+ Top-level parse: require EOF after the expression
 </summary>
 </member>
 <member name="P:Parser.Parsing.letParser">
 <summary>
- Let-binding: let x = expr in expr
+ Let-binding: `let x = expr in expr`
 </summary>
 </member>
 <member name="P:Parser.Parsing.lambdaParser">
 <summary>
- Lambda: fun x -&gt; expr
+ Lambda: `fun x -&gt; expr`
 </summary>
 </member>
-<member name="M:Parser.Parsing.paren``2(Microsoft.FSharp.Core.FSharpFunc{FParsec.CharStream{``1},FParsec.Reply{``0}})">
+<member name="P:Parser.Parsing.application">
 <summary>
- Parenthesized parser helper
+ Function application: one or more atoms, left-associative
+</summary>
+</member>
+<member name="P:Parser.Parsing.atom">
+<summary>
+ A simple atomic term (no application)
+</summary>
+</member>
+<member name="P:Parser.Parsing.parenExpr">
+<summary>
+ Parenthesized sub-expression: `( expr )`
 </summary>
 </member>
 <member name="P:Parser.Parsing.expr">
 <summary>
- Forward declaration for recursive expressions
+ Forward declaration of `expr` so we can be recursive
 </summary>
 </member>
 <member name="P:Parser.Parsing.exprRef">
 <summary>
- Forward declaration for recursive expressions
+ Forward declaration of `expr` so we can be recursive
 </summary>
 </member>
 <member name="P:Parser.Parsing.pint_ws">
 <summary>
- Integer literal parser
+ Parse a 32-bit integer literal
 </summary>
 </member>
 <member name="P:Parser.Parsing.identifier">
 <summary>
- Identifier: letter (letter|digit|_)*
+ Parse an identifier that is **not** a reserved keyword
 </summary>
 </member>
 <member name="M:Parser.Parsing.ws``1">
 <summary>
- Whitespace parser
+ Consume trailing whitespace
 </summary>
 </member>
 </members>

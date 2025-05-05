@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "QZXflRpHeKg=",
+  "dgSpecHash": "gHd6YGJobQc=",
   "success": true,
   "projectFilePath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\Parser\\Parser.fsproj",
   "expectedPackageFiles": [
+    "C:\\Users\\elwoo\\.nuget\\packages\\fparsec\\1.1.1\\fparsec.1.1.1.nupkg.sha512",
     "C:\\Users\\elwoo\\.nuget\\packages\\fsharp.core\\9.0.201\\fsharp.core.9.0.201.nupkg.sha512"
   ],
   "logs": []

@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+  }
+  
+  textarea {
+    width: 100%;
+    font-family: monospace;
+  }
+  
+  .ast,
+  .ast ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ast li {
+    margin-left: 1rem;
+    position: relative;
+  }
+  
+  .ast li::before {
+    content: "├";
+    position: absolute;
+    left: -1rem;
+  }
+  
+  .error {
+    color: red;
+  }
+  

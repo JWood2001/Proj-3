@@ -2,6 +2,28 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "FParsec/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.3.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/FParsec.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/netstandard2.0/FParsecCS.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/FParsec.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/netstandard2.0/FParsecCS.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "FSharp.Core/9.0.201": {
         "type": "package",
         "compile": {
@@ -59,6 +81,29 @@
     }
   },
   "libraries": {
+    "FParsec/1.1.1": {
+      "sha512": "Wdjf/gCNLEwd+0nUCDh9jAIIcKGwfhRramySTnTcVVgNC6i4Vp5aJklUJJfvFkEZMYNZEDGcI8pCa36/TmwmSg==",
+      "type": "package",
+      "path": "fparsec/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fparsec.1.1.1.nupkg.sha512",
+        "fparsec.nuspec",
+        "lib/net45/FParsec.dll",
+        "lib/net45/FParsec.pdb",
+        "lib/net45/FParsec.xml",
+        "lib/net45/FParsecCS.dll",
+        "lib/net45/FParsecCS.pdb",
+        "lib/net45/FParsecCS.xml",
+        "lib/netstandard2.0/FParsec.dll",
+        "lib/netstandard2.0/FParsec.pdb",
+        "lib/netstandard2.0/FParsec.xml",
+        "lib/netstandard2.0/FParsecCS.dll",
+        "lib/netstandard2.0/FParsecCS.pdb",
+        "lib/netstandard2.0/FParsecCS.xml"
+      ]
+    },
     "FSharp.Core/9.0.201": {
       "sha512": "Ozq4T0ISTkqTYJ035XW/JkdDDaXofbykvfyVwkjLSqaDZ/4uNXfpf92cjcMI9lf9CxWqmlWHScViPh/4AvnWcw==",
       "type": "package",
@@ -104,6 +149,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "FParsec >= 1.1.1",
       "FSharp.Core >= 9.0.201"
     ]
   },
@@ -148,6 +194,11 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "FParsec": {
+            "target": "Package",
+            "version": "[1.1.1, )",
+            "generatePathProperty": true
+          },
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",

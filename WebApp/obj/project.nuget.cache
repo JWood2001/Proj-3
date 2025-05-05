@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RHrx9ZAMMFM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elwoo\\.nuget\\packages\\fsharp.core\\9.0.201\\fsharp.core.9.0.201.nupkg.sha512"
+  ],
+  "logs": []
+}

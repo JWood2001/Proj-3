@@ -1,0 +1,13 @@
+# Ignore build outputs
+bin/
+obj/
+
+# VS Code settings
+.vscode/
+
+# Rider settings
+.idea/
+
+# User-specific files
+*.user
+*.suo

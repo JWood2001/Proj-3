@@ -38,3 +38,6 @@ dotnet restore
 
 # Run the web app
 dotnet run --project WebApp
+
+![AST UI](./Screenshots/MicroML-Visualizer.png)
+

@@ -1,8 +1,9 @@
+// WebApp/Program.fs
+
 module WebApp.Program
 
 open System.Threading.Tasks
 open Microsoft.AspNetCore.Builder
-open Microsoft.AspNetCore.Hosting
 open Microsoft.Extensions.Hosting
 
 open Giraffe
@@ -11,8 +12,9 @@ open Giraffe.ViewEngine
 open Parser.AST
 open Parser.Parsing
 
-/// Recursively render an Expr as a nested <ul>…</ul>
-let rec renderList (expr: Expr) =
+/// Recursively render an Expr as a nested <ul class="ast">
+let rec renderList (expr: Expr) : XmlNode =
+    // Build any child subtrees
     let children =
         match expr with
         | IntLit _ | Var _    -> []
@@ -20,54 +22,53 @@ let rec renderList (expr: Expr) =
         | App(f, x)           -> [ renderList f; renderList x ]
         | Let(_, v, b)        -> [ renderList v; renderList b ]
 
-    ul [ _class "ast" ] [
-      li [] [
-        span [] [ str (sprintf "%A" expr) ]
-        for c in children do yield c
-      ]
-    ]
+    // Create a UL node whose first item is this expr, then its children
+    ul [ _class "ast" ] (
+        [ span [] [ str (sprintf "%O" expr) ] ] @ children
+    )
 
+/// The main HTTP handler
 let webApp : HttpHandler =
     choose [
-      GET  >=> htmlFile "Views/index.html"
-      POST >=> fun next ctx -> task {
-        let! form = ctx.BindFormAsync()
-        let code = form.["code"]
-        match parse code with
-        | Result.Ok ast ->
-            let view = renderList ast
-            // wrap in a full HTML document:
-            let htmlDoc =
-              html [] [
-                head [] [
-                  title [] [ str "MicroML AST" ]
-                  link [ _rel "stylesheet"; _href "/styles.css" ]
-                ]
-                body [] [
-                  view
-                ]
-              ]
-            return! htmlString (RenderView.AsString.htmlDocument htmlDoc) next ctx
+        GET  >=> htmlFile "Views/index.html"
+        POST >=> fun next ctx -> task {
+            // Bind form data
+            let! form = ctx.BindFormAsync()
+            let code = form.["code"].ToString()
 
-        | Result.Error err ->
-            return! htmlString $"<p class='error'>Parse error: {err}</p>" next ctx
-      }
+            match parse code with
+            | Ok ast ->
+                // Render and wrap in an HTML document
+                let view = renderList ast
+                let htmlDoc =
+                    html [] [
+                        head [] [
+                            title [] [ str "MicroML AST Visualizer" ]
+                            link [ _rel "stylesheet"; _href "/styles.css" ]
+                        ]
+                        body [] [ view ]
+                    ]
+                let htmlStr = RenderView.AsString.htmlDocument htmlDoc
+                return! htmlString htmlStr next ctx
+
+            | Error err ->
+                return! htmlString (sprintf "<p class='error'>Parse error: %s</p>" err) next ctx
+        }
     ]
 
 [<EntryPoint>]
 let main args =
     Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(fun web ->
-            web
-              .UseUrls("http://localhost:5000")
-              .Configure(fun app ->
-                app.UseStaticFiles() |> ignore
-                app.UseGiraffe webApp
-              )
-        )
-        .Build()
-        .Run()
-
+      .ConfigureWebHostDefaults(fun webBuilder ->
+          webBuilder.UseUrls("http://localhost:5000") |> ignore
+          webBuilder.Configure(fun appBuilder ->
+              appBuilder.UseStaticFiles() |> ignore
+              appBuilder.UseGiraffe webApp   |> ignore
+          ) |> ignore
+      )
+      .Build()
+      .Run()
     0
+
 
 

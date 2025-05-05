@@ -4,14 +4,14 @@
     "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj": {
+    "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\Parser\\Parser.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj",
-        "projectName": "WebApp",
-        "projectPath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj",
+        "projectUniqueName": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\Parser\\Parser.fsproj",
+        "projectName": "Parser",
+        "projectPath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\Parser\\Parser.fsproj",
         "packagesPath": "C:\\Users\\elwoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\",
+        "outputPath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\Parser\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\elwoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\9.0.201\\FSharp\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\9.0.203\\FSharp\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,10 +42,89 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "FParsec": {
+              "target": "Package",
+              "version": "[1.1.1, )",
+              "generatePathProperty": true
+            },
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[9.0.201, )",
+              "version": "[9.0.202, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj",
+        "projectName": "WebApp",
+        "projectPath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\WebApp.fsproj",
+        "packagesPath": "C:\\Users\\elwoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\elwoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\9.0.203\\FSharp\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\Parser\\Parser.fsproj": {
+                "projectPath": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\Parser\\Parser.fsproj"
+              }
+            }
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[9.0.202, )",
+              "generatePathProperty": true
+            },
+            "Giraffe": {
+              "target": "Package",
+              "version": "[6.0.0, )",
               "generatePathProperty": true
             }
           },
@@ -68,7 +147,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "Hash": "QIgKrpZoLkGtuZMgSoUtD3MyGUPImsaXWTNM+uOzFaQ=",
+  "Source": "WebApp",
+  "BasePath": "_content/WebApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApp\\wwwroot",
+      "Source": "WebApp",
+      "ContentRoot": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\Debug\\net9.0\\compressed\\rng4l2rx7u-i2bjva6lxu.gz",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "styles#[.{fingerprint=i2bjva6lxu}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\wwwroot\\styles.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ipjwi485ey",
+      "Integrity": "OjIrItnUW6nDJrGZlyktoFzq4Ley9j5qVvQEhnpPHXU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\wwwroot\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\wwwroot\\styles.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "styles#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i2bjva6lxu",
+      "Integrity": "Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "styles.css",
+      "AssetFile": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\Debug\\net9.0\\compressed\\rng4l2rx7u-i2bjva6lxu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004310344828"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "231"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OjIrItnUW6nDJrGZlyktoFzq4Ley9j5qVvQEhnpPHXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:15:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css",
+      "AssetFile": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:15:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css.gz",
+      "AssetFile": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\Debug\\net9.0\\compressed\\rng4l2rx7u-i2bjva6lxu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OjIrItnUW6nDJrGZlyktoFzq4Ley9j5qVvQEhnpPHXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:15:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OjIrItnUW6nDJrGZlyktoFzq4Ley9j5qVvQEhnpPHXU="
+        }
+      ]
+    },
+    {
+      "Route": "styles.i2bjva6lxu.css",
+      "AssetFile": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\Debug\\net9.0\\compressed\\rng4l2rx7u-i2bjva6lxu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004310344828"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "231"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OjIrItnUW6nDJrGZlyktoFzq4Ley9j5qVvQEhnpPHXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:15:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i2bjva6lxu"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo="
+        }
+      ]
+    },
+    {
+      "Route": "styles.i2bjva6lxu.css",
+      "AssetFile": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:15:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i2bjva6lxu"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Nrpuhh3FPb/7UsFhLFRc2VjJ3UYzMA+bqtPsR24UaJo="
+        }
+      ]
+    },
+    {
+      "Route": "styles.i2bjva6lxu.css.gz",
+      "AssetFile": "C:\\Users\\elwoo\\Desktop\\UNI\\Senior 2023-2024\\Project-3\\WebApp\\obj\\Debug\\net9.0\\compressed\\rng4l2rx7u-i2bjva6lxu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "231"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OjIrItnUW6nDJrGZlyktoFzq4Ley9j5qVvQEhnpPHXU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 14:15:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i2bjva6lxu"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OjIrItnUW6nDJrGZlyktoFzq4Ley9j5qVvQEhnpPHXU="
+        }
+      ]
+    }
+  ]
+}

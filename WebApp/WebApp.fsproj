@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <!-- Disable auto AssemblyInfo so we don’t pull in the empty obj file -->
+    <!-- Turn off the auto AssemblyInfo so we don’t pull in the obj file -->
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Compile your entry point -->
+    <!-- Explicitly compile your Program.fs -->
     <Compile Include="Program.fs" />
   </ItemGroup>
 
@@ -20,6 +20,8 @@
     <ProjectReference Include="..\Parser\Parser.fsproj" />
   </ItemGroup>
 </Project>
+
+
 
 
 

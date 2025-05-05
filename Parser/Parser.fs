@@ -5,32 +5,31 @@ module Parser.Parsing
 open FParsec
 open Parser.AST
 
-/// Consume trailing whitespace
+/// Whitespace
 let ws     = spaces
 let str_ws s = pstring s .>> ws
 
-/// Parse an identifier that is **not** a reserved keyword
+/// Identifier that cannot be a keyword
 let identifier : Parser<string,unit> =
   let isStart c = isLetter c
   let isChar  c = isLetter c || isDigit c || c = '_'
-  many1Satisfy2L isStart isChar "identifier"
-  .>> ws
+  many1Satisfy2L isStart isChar "identifier" .>> ws
   >>= fun id ->
-    // Exclude reserved words
     match id with
-    | "let" | "in" | "fun" -> fail $"keyword '{id}' cannot be used as an identifier"
-    | _                   -> preturn id
+    | "let" | "in" | "fun" 
+      -> fail $"keyword '{id}' cannot be used as an identifier"
+    | _ -> preturn id
 
-/// Parse a 32-bit integer literal
+/// Integer literal
 let pint_ws = pint32 .>> ws |>> Expr.IntLit
 
-/// Forward declaration of `expr` so we can be recursive
+/// Forward recursion
 let expr, exprRef = createParserForwardedToRef<Expr,unit>()
 
-/// Parenthesized sub-expression: `( expr )`
+/// Parenthesized expression
 let parenExpr = between (str_ws "(") (str_ws ")") expr
 
-/// A simple atomic term (no application)
+/// Atomic term (no application)
 let atom =
   choice [
     attempt pint_ws
@@ -38,32 +37,33 @@ let atom =
     parenExpr
   ]
 
-/// Function application: one or more atoms, left-associative
+/// Application: one or more atoms
 let application =
   many1 atom
   |>> List.reduce (fun f x -> Expr.App(f, x))
 
-/// Lambda: `fun x -> expr`
+/// Lambda: fun x -> expr
 let lambdaParser =
   str_ws "fun" >>. identifier .>> str_ws "->"
   .>>. expr
   |>> fun (arg, body) -> Expr.Lambda(arg, body)
 
-/// Let-binding: `let x = expr in expr`
+/// Let-binding: let x = expr in expr
 let letParser =
   str_ws "let" >>. identifier .>> str_ws "=" .>>. expr
   .>> str_ws "in" .>>. expr
   |>> fun ((name, value), body) -> Expr.Let(name, value, body)
 
-/// Define `expr` to first try let, then lambda, then application
+/// Top-level expr: prefer let → lambda → application
 do exprRef.Value <- ws >>. choice [
   attempt letParser
   attempt lambdaParser
   application
 ]
 
-/// Top-level parse: require EOF after the expression
+/// Public API: require EOF after expr
 let parse (input:string) : Result<Expr,string> =
   match run (expr .>> eof) input with
-  | Success(res, _, _) -> Result.Ok    res
+  | Success(res, _, _) -> Result.Ok res
   | Failure(err, _, _) -> Result.Error err
+

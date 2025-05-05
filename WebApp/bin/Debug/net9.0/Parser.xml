@@ -14,57 +14,57 @@
 </member>
 <member name="M:Parser.Parsing.parse(System.String)">
 <summary>
- Top-level parse: require EOF after the expression
+ Public API: require EOF after expr
 </summary>
 </member>
 <member name="P:Parser.Parsing.letParser">
 <summary>
- Let-binding: `let x = expr in expr`
+ Let-binding: let x = expr in expr
 </summary>
 </member>
 <member name="P:Parser.Parsing.lambdaParser">
 <summary>
- Lambda: `fun x -&gt; expr`
+ Lambda: fun x -&gt; expr
 </summary>
 </member>
 <member name="P:Parser.Parsing.application">
 <summary>
- Function application: one or more atoms, left-associative
+ Application: one or more atoms
 </summary>
 </member>
 <member name="P:Parser.Parsing.atom">
 <summary>
- A simple atomic term (no application)
+ Atomic term (no application)
 </summary>
 </member>
 <member name="P:Parser.Parsing.parenExpr">
 <summary>
- Parenthesized sub-expression: `( expr )`
+ Parenthesized expression
 </summary>
 </member>
 <member name="P:Parser.Parsing.expr">
 <summary>
- Forward declaration of `expr` so we can be recursive
+ Forward recursion
 </summary>
 </member>
 <member name="P:Parser.Parsing.exprRef">
 <summary>
- Forward declaration of `expr` so we can be recursive
+ Forward recursion
 </summary>
 </member>
 <member name="P:Parser.Parsing.pint_ws">
 <summary>
- Parse a 32-bit integer literal
+ Integer literal
 </summary>
 </member>
 <member name="P:Parser.Parsing.identifier">
 <summary>
- Parse an identifier that is **not** a reserved keyword
+ Identifier that cannot be a keyword
 </summary>
 </member>
 <member name="M:Parser.Parsing.ws``1">
 <summary>
- Consume trailing whitespace
+ Whitespace
 </summary>
 </member>
 </members>
